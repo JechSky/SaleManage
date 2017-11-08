@@ -1,0 +1,52 @@
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\SaleManage.exe.config
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\SaleManage.exe
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\SaleManage.pdb
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\DAL.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\EntityFramework.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\Models.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\DAL.pdb
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\DAL.dll.config
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\Models.pdb
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\Models.dll.config
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\EntityFramework.xml
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\zh-Hans\EntityFramework.resources.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\obj\Release\SaleManage.csprojResolveAssemblyReference.cache
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\obj\Release\SaleManage.FrmBalance.resources
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\obj\Release\SaleManage.FrmLogin.resources
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\obj\Release\SaleManage.FrmSaleManage.resources
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\obj\Release\SaleManage.Properties.Resources.resources
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\obj\Release\SaleManage.csproj.GenerateResource.Cache
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\obj\Release\SaleManage.exe
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\SaleManage\obj\Release\SaleManage.pdb
+F:\SaleManage\SaleManage\SaleManage\bin\Release\SaleManage.exe.config
+F:\SaleManage\SaleManage\SaleManage\bin\Release\SaleManage.exe
+F:\SaleManage\SaleManage\SaleManage\bin\Release\SaleManage.pdb
+F:\SaleManage\SaleManage\SaleManage\bin\Release\DAL.dll
+F:\SaleManage\SaleManage\SaleManage\bin\Release\EntityFramework.dll
+F:\SaleManage\SaleManage\SaleManage\bin\Release\EntityFramework.SqlServer.dll
+F:\SaleManage\SaleManage\SaleManage\bin\Release\FSharp.Core.dll
+F:\SaleManage\SaleManage\SaleManage\bin\Release\Linq.Expression.Optimizer.dll
+F:\SaleManage\SaleManage\SaleManage\bin\Release\Models.dll
+F:\SaleManage\SaleManage\SaleManage\bin\Release\DAL.pdb
+F:\SaleManage\SaleManage\SaleManage\bin\Release\DAL.dll.config
+F:\SaleManage\SaleManage\SaleManage\bin\Release\Models.pdb
+F:\SaleManage\SaleManage\SaleManage\bin\Release\Models.dll.config
+F:\SaleManage\SaleManage\SaleManage\bin\Release\EntityFramework.xml
+F:\SaleManage\SaleManage\SaleManage\bin\Release\EntityFramework.SqlServer.xml
+F:\SaleManage\SaleManage\SaleManage\bin\Release\FSharp.Core.xml
+F:\SaleManage\SaleManage\SaleManage\bin\Release\Linq.Expression.Optimizer.xml
+F:\SaleManage\SaleManage\SaleManage\bin\Release\zh-Hans\EntityFramework.resources.dll
+F:\SaleManage\SaleManage\SaleManage\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\SaleManage\SaleManage\SaleManage\obj\Release\SaleManage.csprojResolveAssemblyReference.cache
+F:\SaleManage\SaleManage\SaleManage\obj\Release\SaleManage.FrmBalance.resources
+F:\SaleManage\SaleManage\SaleManage\obj\Release\SaleManage.FrmLogin.resources
+F:\SaleManage\SaleManage\SaleManage\obj\Release\SaleManage.FrmSaleManage.resources
+F:\SaleManage\SaleManage\SaleManage\obj\Release\SaleManage.Properties.Resources.resources
+F:\SaleManage\SaleManage\SaleManage\obj\Release\SaleManage.csproj.GenerateResource.Cache
+F:\SaleManage\SaleManage\SaleManage\obj\Release\SaleManage.exe
+F:\SaleManage\SaleManage\SaleManage\obj\Release\SaleManage.pdb
+F:\SaleManage\SaleManage\SaleManage\bin\Release\CommonTools.dll
+F:\SaleManage\SaleManage\SaleManage\bin\Release\CommonTools.pdb

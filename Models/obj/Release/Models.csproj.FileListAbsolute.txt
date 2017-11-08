@@ -1,0 +1,28 @@
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\Models\bin\Release\Models.dll.config
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\Models\bin\Release\Models.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\Models\bin\Release\Models.pdb
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\Models\bin\Release\EntityFramework.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\Models\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\Models\bin\Release\EntityFramework.xml
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\Models\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\Models\bin\Release\zh-Hans\EntityFramework.resources.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\Models\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\Models\obj\Release\Models.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\Models\obj\Release\Models.pdb
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\Models\obj\Release\Models.csprojResolveAssemblyReference.cache
+F:\SaleManage\SaleManage\Models\bin\Release\Models.dll.config
+F:\SaleManage\SaleManage\Models\bin\Release\Models.dll
+F:\SaleManage\SaleManage\Models\bin\Release\Models.pdb
+F:\SaleManage\SaleManage\Models\bin\Release\EntityFramework.dll
+F:\SaleManage\SaleManage\Models\bin\Release\EntityFramework.SqlServer.dll
+F:\SaleManage\SaleManage\Models\bin\Release\FSharp.Core.dll
+F:\SaleManage\SaleManage\Models\bin\Release\Linq.Expression.Optimizer.dll
+F:\SaleManage\SaleManage\Models\bin\Release\EntityFramework.xml
+F:\SaleManage\SaleManage\Models\bin\Release\EntityFramework.SqlServer.xml
+F:\SaleManage\SaleManage\Models\bin\Release\FSharp.Core.xml
+F:\SaleManage\SaleManage\Models\bin\Release\Linq.Expression.Optimizer.xml
+F:\SaleManage\SaleManage\Models\bin\Release\zh-Hans\EntityFramework.resources.dll
+F:\SaleManage\SaleManage\Models\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\SaleManage\SaleManage\Models\obj\Release\Models.csprojResolveAssemblyReference.cache
+F:\SaleManage\SaleManage\Models\obj\Release\Models.dll
+F:\SaleManage\SaleManage\Models\obj\Release\Models.pdb

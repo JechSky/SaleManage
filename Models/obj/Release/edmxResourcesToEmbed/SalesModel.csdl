@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SaleManagerDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="InventoryStatus">
+    <Key>
+      <PropertyRef Name="StatusId" />
+    </Key>
+    <Property Name="StatusId" Type="Int32" Nullable="false" />
+    <Property Name="StatusDesc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ProductInventory" Relationship="Self.FK__ProductIn__Statu__2C3393D0" FromRole="InventoryStatus" ToRole="ProductInventory" />
+  </EntityType>
+  <EntityType Name="LoginLogs">
+    <Key>
+      <PropertyRef Name="LogId" />
+    </Key>
+    <Property Name="LogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoginId" Type="Int32" Nullable="false" />
+    <Property Name="SPName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ServerName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="LoginTime" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExitTime" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CategoryName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Products" Relationship="Self.FK__Products__Catego__276EDEB3" FromRole="ProductCategory" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="ProductInventory">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TotalCount" Type="Int32" Nullable="false" />
+    <Property Name="MinCount" Type="Int32" Nullable="false" />
+    <Property Name="MaxCount" Type="Int32" Nullable="false" />
+    <Property Name="StatusId" Type="Int32" />
+    <NavigationProperty Name="InventoryStatus" Relationship="Self.FK__ProductIn__Statu__2C3393D0" FromRole="ProductInventory" ToRole="InventoryStatus" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="UnitPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Discount" Type="Int32" />
+    <Property Name="CategoryId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="ProductCategory" Relationship="Self.FK__Products__Catego__276EDEB3" FromRole="Products" ToRole="ProductCategory" />
+    <Property Name="InUnitPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="AddTime" Type="DateTime" Precision="3" />
+    <Property Name="Remark" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="SalesListDetails" Relationship="SaleManagerDBModel.FK__SalesList__Produ__151B244E" FromRole="Products" ToRole="SalesListDetail" />
+    <Property Name="SupplierId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SalesList">
+    <Key>
+      <PropertyRef Name="SerialNum" />
+    </Key>
+    <Property Name="SerialNum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="TotalMoney" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="RealReceive" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="ReturnMoney" Type="Decimal" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="SalesPersonId" Type="Int32" />
+    <Property Name="SaleDate" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="SalesPerson" Relationship="Self.FK__SalesList__Sales__30F848ED" FromRole="SalesList" ToRole="SalesPerson" />
+    <NavigationProperty Name="SalesListDetail" Relationship="Self.FK__SalesList__Seria__34C8D9D1" FromRole="SalesList" ToRole="SalesListDetail" />
+    <Property Name="SaleDisCount" Type="Int32" />
+  </EntityType>
+  <EntityType Name="SalesListDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SerialNum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProductId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Quantity" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="SalesList" Relationship="Self.FK__SalesList__Seria__34C8D9D1" FromRole="SalesListDetail" ToRole="SalesList" />
+    <NavigationProperty Name="Product" Relationship="SaleManagerDBModel.FK__SalesList__Produ__151B244E" FromRole="SalesListDetail" ToRole="Products" />
+  </EntityType>
+  <EntityType Name="SalesPerson">
+    <Key>
+      <PropertyRef Name="SalesPersonId" />
+    </Key>
+    <Property Name="SalesPersonId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SPName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LoginPwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="SalesList" Relationship="Self.FK__SalesList__Sales__30F848ED" FromRole="SalesPerson" ToRole="SalesList" />
+  </EntityType>
+  <EntityType Name="SMMembers">
+    <Key>
+      <PropertyRef Name="MemberId" />
+    </Key>
+    <Property Name="MemberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Points" Type="Int32" Nullable="false" />
+    <Property Name="PhoneNumber" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MemberAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="OpenTime" Type="DateTime" Precision="3" />
+    <Property Name="MemberStatus" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SysAdmins">
+    <Key>
+      <PropertyRef Name="LoginId" />
+    </Key>
+    <Property Name="LoginId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LoginPwd" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AdminName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="AdminStatus" Type="Boolean" />
+    <Property Name="RoleId" Type="Int32" />
+  </EntityType>
+  <Association Name="FK__ProductIn__Statu__2C3393D0">
+    <End Role="InventoryStatus" Type="Self.InventoryStatus" Multiplicity="0..1" />
+    <End Role="ProductInventory" Type="Self.ProductInventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryStatus">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="ProductInventory">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Products__Catego__276EDEB3">
+    <End Role="ProductCategory" Type="Self.ProductCategory" Multiplicity="1" />
+    <End Role="Products" Type="Self.Products" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ProductCategory">
+        <PropertyRef Name="CategoryId" />
+      </Principal>
+      <Dependent Role="Products">
+        <PropertyRef Name="CategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SalesList__Sales__30F848ED">
+    <End Role="SalesPerson" Type="Self.SalesPerson" Multiplicity="0..1" />
+    <End Role="SalesList" Type="Self.SalesList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesPerson">
+        <PropertyRef Name="SalesPersonId" />
+      </Principal>
+      <Dependent Role="SalesList">
+        <PropertyRef Name="SalesPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SalesList__Seria__34C8D9D1">
+    <End Role="SalesList" Type="Self.SalesList" Multiplicity="0..1" />
+    <End Role="SalesListDetail" Type="Self.SalesListDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesList">
+        <PropertyRef Name="SerialNum" />
+      </Principal>
+      <Dependent Role="SalesListDetail">
+        <PropertyRef Name="SerialNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="SaleManagerDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="InventoryStatus" EntityType="Self.InventoryStatus" />
+    <EntitySet Name="LoginLogs" EntityType="Self.LoginLogs" />
+    <EntitySet Name="ProductCategory" EntityType="Self.ProductCategory" />
+    <EntitySet Name="ProductInventory" EntityType="Self.ProductInventory" />
+    <EntitySet Name="Products" EntityType="Self.Products" />
+    <EntitySet Name="SalesList" EntityType="Self.SalesList" />
+    <EntitySet Name="SalesListDetail" EntityType="Self.SalesListDetail" />
+    <EntitySet Name="SalesPerson" EntityType="Self.SalesPerson" />
+    <EntitySet Name="SMMembers" EntityType="Self.SMMembers" />
+    <EntitySet Name="SysAdmins" EntityType="Self.SysAdmins" />
+    <AssociationSet Name="FK__ProductIn__Statu__2C3393D0" Association="Self.FK__ProductIn__Statu__2C3393D0">
+      <End Role="InventoryStatus" EntitySet="InventoryStatus" />
+      <End Role="ProductInventory" EntitySet="ProductInventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Products__Catego__276EDEB3" Association="Self.FK__Products__Catego__276EDEB3">
+      <End Role="ProductCategory" EntitySet="ProductCategory" />
+      <End Role="Products" EntitySet="Products" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SalesList__Sales__30F848ED" Association="Self.FK__SalesList__Sales__30F848ED">
+      <End Role="SalesPerson" EntitySet="SalesPerson" />
+      <End Role="SalesList" EntitySet="SalesList" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SalesList__Seria__34C8D9D1" Association="Self.FK__SalesList__Seria__34C8D9D1">
+      <End Role="SalesList" EntitySet="SalesList" />
+      <End Role="SalesListDetail" EntitySet="SalesListDetail" />
+    </AssociationSet>
+    <FunctionImport Name="usp_AdminLogin" ReturnType="Collection(SaleManagerDBModel.usp_AdminLogin_Result)">
+      <Parameter Name="LoginId" Mode="In" Type="Int32" />
+      <Parameter Name="LoginPwd" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="usp_AddProduct">
+      <Parameter Name="SupplierName" Mode="In" Type="String" />
+      <Parameter Name="ProductId" Mode="In" Type="String" />
+      <Parameter Name="ProductName" Mode="In" Type="String" />
+      <Parameter Name="InUnitPrice" Mode="In" Type="Decimal" />
+      <Parameter Name="UnitPrice" Mode="In" Type="Decimal" />
+      <Parameter Name="CategoryId" Mode="In" Type="Int32" />
+      <Parameter Name="Count" Mode="In" Type="Int32" />
+      <Parameter Name="AddTime" Mode="In" Type="DateTime" />
+    </FunctionImport>
+    <EntitySet Name="Suppliers" EntityType="SaleManagerDBModel.Supplier" />
+    <AssociationSet Name="FK__SalesList__Produ__151B244E" Association="SaleManagerDBModel.FK__SalesList__Produ__151B244E">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="SalesListDetail" EntitySet="SalesListDetail" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="usp_AdminLogin_Result">
+    <Property Type="Int32" Name="LoginId" Nullable="false" />
+    <Property Type="String" Name="LoginPwd" Nullable="true" MaxLength="20" />
+    <Property Type="String" Name="AdminName" Nullable="true" MaxLength="20" />
+    <Property Type="Boolean" Name="AdminStatus" Nullable="true" />
+    <Property Type="Int32" Name="RoleId" Nullable="true" />
+  </ComplexType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="SupplierId" />
+    </Key>
+    <Property Name="SupplierName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SupplierId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK__SalesList__Produ__151B244E">
+    <End Type="SaleManagerDBModel.Products" Role="Products" Multiplicity="1" />
+    <End Type="SaleManagerDBModel.SalesListDetail" Role="SalesListDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="SalesListDetail">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

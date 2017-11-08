@@ -1,0 +1,15 @@
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Debug\DAL.dll.config
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Debug\DAL.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Debug\DAL.pdb
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Debug\EntityFramework.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Debug\Models.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Debug\Models.pdb
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Debug\Models.dll.config
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Debug\EntityFramework.xml
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Debug\zh-Hans\EntityFramework.resources.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Debug\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\obj\Debug\DAL.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\obj\Debug\DAL.pdb

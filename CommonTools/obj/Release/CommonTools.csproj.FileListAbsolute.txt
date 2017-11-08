@@ -1,0 +1,11 @@
+F:\SaleManage\SaleManage\CommonTools\bin\Release\CommonTools.dll
+F:\SaleManage\SaleManage\CommonTools\bin\Release\CommonTools.pdb
+F:\SaleManage\SaleManage\CommonTools\bin\Release\Models.dll
+F:\SaleManage\SaleManage\CommonTools\bin\Release\EntityFramework.dll
+F:\SaleManage\SaleManage\CommonTools\bin\Release\Models.pdb
+F:\SaleManage\SaleManage\CommonTools\bin\Release\Models.dll.config
+F:\SaleManage\SaleManage\CommonTools\bin\Release\EntityFramework.xml
+F:\SaleManage\SaleManage\CommonTools\bin\Release\zh-Hans\EntityFramework.resources.dll
+F:\SaleManage\SaleManage\CommonTools\obj\Release\CommonTools.csprojResolveAssemblyReference.cache
+F:\SaleManage\SaleManage\CommonTools\obj\Release\CommonTools.dll
+F:\SaleManage\SaleManage\CommonTools\obj\Release\CommonTools.pdb

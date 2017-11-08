@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SaleManagerDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="InventoryStatus">
+    <Key>
+      <PropertyRef Name="StatusId" />
+    </Key>
+    <Property Name="StatusId" Type="int" Nullable="false" />
+    <Property Name="StatusDesc" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="LoginLogs">
+    <Key>
+      <PropertyRef Name="LogId" />
+    </Key>
+    <Property Name="LogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoginId" Type="int" Nullable="false" />
+    <Property Name="SPName" Type="varchar" MaxLength="50" />
+    <Property Name="ServerName" Type="varchar" MaxLength="100" />
+    <Property Name="LoginTime" Type="datetime" Nullable="false" />
+    <Property Name="ExitTime" Type="datetime" />
+  </EntityType>
+  <EntityType Name="ProductCategory">
+    <Key>
+      <PropertyRef Name="CategoryId" />
+    </Key>
+    <Property Name="CategoryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CategoryName" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ProductInventory">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TotalCount" Type="int" Nullable="false" />
+    <Property Name="MinCount" Type="int" Nullable="false" />
+    <Property Name="MaxCount" Type="int" Nullable="false" />
+    <Property Name="StatusId" Type="int" />
+  </EntityType>
+  <EntityType Name="Products">
+    <Key>
+      <PropertyRef Name="ProductId" />
+    </Key>
+    <Property Name="ProductId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ProductName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="UnitPrice" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Discount" Type="int" />
+    <Property Name="CategoryId" Type="int" Nullable="false" />
+    <Property Name="AddTime" Type="datetime" />
+    <Property Name="SupplierId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Remark" Type="nvarchar" MaxLength="50" />
+    <Property Name="InUnitPrice" Type="numeric" Precision="18" Scale="2" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SalesList">
+    <Key>
+      <PropertyRef Name="SerialNum" />
+    </Key>
+    <Property Name="SerialNum" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TotalMoney" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="RealReceive" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="ReturnMoney" Type="numeric" Precision="10" Scale="2" Nullable="false" />
+    <Property Name="SalesPersonId" Type="int" />
+    <Property Name="SaleDate" Type="smalldatetime" Nullable="false" />
+    <Property Name="SaleDisCount" Type="int" />
+  </EntityType>
+  <EntityType Name="SalesListDetail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SerialNum" Type="varchar" MaxLength="50" />
+    <Property Name="ProductId" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SalesPerson">
+    <Key>
+      <PropertyRef Name="SalesPersonId" />
+    </Key>
+    <Property Name="SalesPersonId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SPName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LoginPwd" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SMMembers">
+    <Key>
+      <PropertyRef Name="MemberId" />
+    </Key>
+    <Property Name="MemberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MemberName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Points" Type="int" Nullable="false" />
+    <Property Name="PhoneNumber" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="MemberAddress" Type="text" Nullable="false" />
+    <Property Name="OpenTime" Type="datetime" />
+    <Property Name="MemberStatus" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="SupplierId" />
+    </Key>
+    <Property Name="SupplierId" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="SupplierName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="SysAdmins">
+    <Key>
+      <PropertyRef Name="LoginId" />
+    </Key>
+    <Property Name="LoginId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LoginPwd" Type="varchar" MaxLength="20" />
+    <Property Name="AdminName" Type="varchar" MaxLength="20" />
+    <Property Name="AdminStatus" Type="bit" />
+    <Property Name="RoleId" Type="int" />
+  </EntityType>
+  <Association Name="FK__ProductIn__Statu__2C3393D0">
+    <End Role="InventoryStatus" Type="Self.InventoryStatus" Multiplicity="0..1" />
+    <End Role="ProductInventory" Type="Self.ProductInventory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="InventoryStatus">
+        <PropertyRef Name="StatusId" />
+      </Principal>
+      <Dependent Role="ProductInventory">
+        <PropertyRef Name="StatusId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SalesList__Produ__151B244E">
+    <End Role="Products" Type="Self.Products" Multiplicity="1" />
+    <End Role="SalesListDetail" Type="Self.SalesListDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Products">
+        <PropertyRef Name="ProductId" />
+      </Principal>
+      <Dependent Role="SalesListDetail">
+        <PropertyRef Name="ProductId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SalesList__Sales__30F848ED">
+    <End Role="SalesPerson" Type="Self.SalesPerson" Multiplicity="0..1" />
+    <End Role="SalesList" Type="Self.SalesList" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesPerson">
+        <PropertyRef Name="SalesPersonId" />
+      </Principal>
+      <Dependent Role="SalesList">
+        <PropertyRef Name="SalesPersonId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SalesList__Seria__34C8D9D1">
+    <End Role="SalesList" Type="Self.SalesList" Multiplicity="0..1" />
+    <End Role="SalesListDetail" Type="Self.SalesListDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SalesList">
+        <PropertyRef Name="SerialNum" />
+      </Principal>
+      <Dependent Role="SalesListDetail">
+        <PropertyRef Name="SerialNum" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="usp_AddProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SupplierName" Type="varchar" Mode="In" />
+    <Parameter Name="ProductId" Type="varchar" Mode="In" />
+    <Parameter Name="ProductName" Type="varchar" Mode="In" />
+    <Parameter Name="InUnitPrice" Type="numeric" Mode="In" />
+    <Parameter Name="UnitPrice" Type="numeric" Mode="In" />
+    <Parameter Name="CategoryId" Type="int" Mode="In" />
+    <Parameter Name="Count" Type="int" Mode="In" />
+    <Parameter Name="AddTime" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="usp_AdminLogin" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="LoginId" Type="int" Mode="In" />
+    <Parameter Name="LoginPwd" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="SaleManagerDBModelStoreContainer">
+    <EntitySet Name="InventoryStatus" EntityType="Self.InventoryStatus" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="LoginLogs" EntityType="Self.LoginLogs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductCategory" EntityType="Self.ProductCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductInventory" EntityType="Self.ProductInventory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Products" EntityType="Self.Products" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalesList" EntityType="Self.SalesList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalesListDetail" EntityType="Self.SalesListDetail" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SalesPerson" EntityType="Self.SalesPerson" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SMMembers" EntityType="Self.SMMembers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SysAdmins" EntityType="Self.SysAdmins" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ProductIn__Statu__2C3393D0" Association="Self.FK__ProductIn__Statu__2C3393D0">
+      <End Role="InventoryStatus" EntitySet="InventoryStatus" />
+      <End Role="ProductInventory" EntitySet="ProductInventory" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SalesList__Produ__151B244E" Association="Self.FK__SalesList__Produ__151B244E">
+      <End Role="Products" EntitySet="Products" />
+      <End Role="SalesListDetail" EntitySet="SalesListDetail" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SalesList__Sales__30F848ED" Association="Self.FK__SalesList__Sales__30F848ED">
+      <End Role="SalesPerson" EntitySet="SalesPerson" />
+      <End Role="SalesList" EntitySet="SalesList" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SalesList__Seria__34C8D9D1" Association="Self.FK__SalesList__Seria__34C8D9D1">
+      <End Role="SalesList" EntitySet="SalesList" />
+      <End Role="SalesListDetail" EntitySet="SalesListDetail" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

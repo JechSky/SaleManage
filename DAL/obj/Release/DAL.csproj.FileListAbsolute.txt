@@ -1,0 +1,34 @@
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Release\DAL.dll.config
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Release\DAL.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Release\DAL.pdb
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Release\EntityFramework.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Release\Models.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Release\Models.pdb
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Release\Models.dll.config
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Release\EntityFramework.xml
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Release\zh-Hans\EntityFramework.resources.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\obj\Release\DAL.dll
+C:\Users\jechsky\Documents\Visual Studio 2017\Projects\SaleManage\DAL\obj\Release\DAL.pdb
+F:\SaleManage\SaleManage\DAL\bin\Release\DAL.dll.config
+F:\SaleManage\SaleManage\DAL\bin\Release\DAL.dll
+F:\SaleManage\SaleManage\DAL\bin\Release\DAL.pdb
+F:\SaleManage\SaleManage\DAL\bin\Release\EntityFramework.dll
+F:\SaleManage\SaleManage\DAL\bin\Release\EntityFramework.SqlServer.dll
+F:\SaleManage\SaleManage\DAL\bin\Release\FSharp.Core.dll
+F:\SaleManage\SaleManage\DAL\bin\Release\Models.dll
+F:\SaleManage\SaleManage\DAL\bin\Release\Models.pdb
+F:\SaleManage\SaleManage\DAL\bin\Release\Models.dll.config
+F:\SaleManage\SaleManage\DAL\bin\Release\EntityFramework.xml
+F:\SaleManage\SaleManage\DAL\bin\Release\EntityFramework.SqlServer.xml
+F:\SaleManage\SaleManage\DAL\bin\Release\FSharp.Core.xml
+F:\SaleManage\SaleManage\DAL\bin\Release\zh-Hans\EntityFramework.resources.dll
+F:\SaleManage\SaleManage\DAL\bin\Release\zh-Hans\EntityFramework.SqlServer.resources.dll
+F:\SaleManage\SaleManage\DAL\obj\Release\DAL.csprojResolveAssemblyReference.cache
+F:\SaleManage\SaleManage\DAL\obj\Release\DAL.dll
+F:\SaleManage\SaleManage\DAL\obj\Release\DAL.pdb
+F:\SaleManage\SaleManage\DAL\bin\Release\CommonTools.dll
+F:\SaleManage\SaleManage\DAL\bin\Release\CommonTools.pdb
